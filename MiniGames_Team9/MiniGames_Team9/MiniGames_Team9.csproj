@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C062A3C-19FC-4B2E-B8F5-D0402E1AB0E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MiniGames_Team9</RootNamespace>
+    <AssemblyName>MiniGames_Team9</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModelsXeTangg\Animation.cs" />
+    <Compile Include="ModelsXeTangg\Enum.cs" />
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelsXeTangg\LevelGame.cs" />
+    <Compile Include="ModelsXeTangg\LoadData.cs" />
+    <Compile Include="ModelsXeTangg\LoadingGame.cs" />
+    <Compile Include="MayBay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MayBay.Designer.cs">
+      <DependentUpon>MayBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelsXeTangg\Attacker.cs" />
+    <Compile Include="ModelsXeTangg\BroneAttacker.cs" />
+    <Compile Include="ModelsXeTangg\Bullet.cs" />
+    <Compile Include="ModelsXeTangg\BulletSimple.cs" />
+    <Compile Include="ModelsXeTangg\DiamondAttacker.cs" />
+    <Compile Include="ModelsXeTangg\Enemy.cs" />
+    <Compile Include="ModelsXeTangg\Figure.cs" />
+    <Compile Include="ModelsXeTangg\FreezeItem.cs" />
+    <Compile Include="ModelsXeTangg\Item.cs" />
+    <Compile Include="ModelsXeTangg\PLayer.cs" />
+    <Compile Include="ModelsXeTangg\PowerItem.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionGame2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionGame2.Designer.cs">
+      <DependentUpon>QuestionGame2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionGame3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionGame3.Designer.cs">
+      <DependentUpon>QuestionGame3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelsXeTangg\RedAttacker.cs" />
+    <Compile Include="ModelsXeTangg\UpgradeItem.cs" />
+    <Compile Include="ModelsXeTangg\Skin.cs" />
+    <Compile Include="ModelsXeTangg\Sound.cs" />
+    <Compile Include="ModelsXeTangg\Spawner.cs" />
+    <Compile Include="UserControl\Game3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Game3.Designer.cs">
+      <DependentUpon>Game3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Game2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Game2.Designer.cs">
+      <DependentUpon>Game2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelsLogin\Const.cs" />
+    <Compile Include="ModelsLogin\ListUsers.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelsZombieHunter\Bullet.cs" />
+    <Compile Include="CarRacing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarRacing.Designer.cs">
+      <DependentUpon>CarRacing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSnake\Circle.cs" />
+    <Compile Include="FlappyBird.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlappyBird.Designer.cs">
+      <DependentUpon>FlappyBird.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSnake\Input.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSnake\Settings.cs" />
+    <Compile Include="Puzzle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puzzle.Designer.cs">
+      <DependentUpon>Puzzle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Snake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Snake.Designer.cs">
+      <DependentUpon>Snake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestMaching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestMaching.Designer.cs">
+      <DependentUpon>TestMaching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\Score.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Score.Designer.cs">
+      <DependentUpon>Score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelsLogin\Users.cs" />
+    <Compile Include="Xetang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xetang.Designer.cs">
+      <DependentUpon>Xetang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZombieHunter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZombieHunter.Designer.cs">
+      <DependentUpon>ZombieHunter.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CarRacing.resx">
+      <DependentUpon>CarRacing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlappyBird.resx">
+      <DependentUpon>FlappyBird.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MayBay.resx">
+      <DependentUpon>MayBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionGame2.resx">
+      <DependentUpon>QuestionGame2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionGame3.resx">
+      <DependentUpon>QuestionGame3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Game3.resx">
+      <DependentUpon>Game3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Game2.resx">
+      <DependentUpon>Game2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puzzle.resx">
+      <DependentUpon>Puzzle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Snake.resx">
+      <DependentUpon>Snake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestMaching.resx">
+      <DependentUpon>TestMaching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Score.resx">
+      <DependentUpon>Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xetang.resx">
+      <DependentUpon>Xetang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZombieHunter.resx">
+      <DependentUpon>ZombieHunter.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ammo-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h81.png" />
+    <None Include="Resources\h71.png" />
+    <None Include="Resources\h61.png" />
+    <None Include="Resources\h51.png" />
+    <None Include="Resources\h41.png" />
+    <None Include="Resources\h31.png" />
+    <None Include="Resources\h21.png" />
+    <None Include="Resources\h11.png" />
+    <None Include="Resources\ch1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\null.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attacker3left1.bmp" />
+    <None Include="Resources\attacker3mediumdown1.bmp" />
+    <None Include="Resources\attacker3mediumleft1.bmp" />
+    <None Include="Resources\attacker3mediumright1.bmp" />
+    <None Include="Resources\a9.png" />
+    <None Include="Resources\a10.png" />
+    <None Include="Resources\a11.png" />
+    <None Include="Resources\a12.png" />
+    <None Include="Resources\a13.png" />
+    <None Include="Resources\a14.png" />
+    <None Include="Resources\a15.png" />
+    <None Include="Resources\a16.png" />
+    <None Include="Resources\a17.png" />
+    <None Include="Resources\a18.png" />
+    <None Include="Resources\a19.png" />
+    <None Include="Resources\a20.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\attacker1down.bmp" />
+    <None Include="Resources\attacker1down.png" />
+    <None Include="Resources\attacker1left.bmp" />
+    <None Include="Resources\attacker1left.png" />
+    <None Include="Resources\attacker1right.bmp" />
+    <None Include="Resources\attacker1right.png" />
+    <None Include="Resources\attacker1up.bmp" />
+    <None Include="Resources\attacker1up.png" />
+    <None Include="Resources\attacker2down.bmp" />
+    <None Include="Resources\attacker2down.png" />
+    <None Include="Resources\attacker2left.bmp" />
+    <None Include="Resources\attacker2left.png" />
+    <None Include="Resources\attacker2right.bmp" />
+    <None Include="Resources\attacker2right.png" />
+    <None Include="Resources\attacker2up.bmp" />
+    <None Include="Resources\attacker2up.png" />
+    <None Include="Resources\attacker2weakdown.bmp" />
+    <None Include="Resources\attacker2weakdown.png" />
+    <None Include="Resources\attacker2weakleft.bmp" />
+    <None Include="Resources\attacker2weakleft.png" />
+    <None Include="Resources\attacker2weakright.bmp" />
+    <None Include="Resources\attacker2weakright.png" />
+    <None Include="Resources\attacker2weakup.bmp" />
+    <None Include="Resources\attacker2weakup.png" />
+    <None Include="Resources\attacker3down.bmp" />
+    <None Include="Resources\attacker3left.bmp" />
+    <None Include="Resources\attacker3mediumdown.bmp" />
+    <None Include="Resources\attacker3mediumleft.bmp" />
+    <None Include="Resources\attacker3mediumright.bmp" />
+    <None Include="Resources\attacker3mediumup.bmp" />
+    <None Include="Resources\attacker3right.bmp" />
+    <None Include="Resources\attacker3up.bmp" />
+    <None Include="Resources\attacker3weakdown.bmp" />
+    <None Include="Resources\attacker3weakleft.bmp" />
+    <None Include="Resources\attacker3weakright.bmp" />
+    <None Include="Resources\attacker3weakup.bmp" />
+    <None Include="Resources\attackerleft.png" />
+    <None Include="Resources\1.bmp" />
+    <None Include="Resources\2.bmp" />
+    <None Include="Resources\8.bmp" />
+    <None Include="Resources\a1.png" />
+    <None Include="Resources\a2.png" />
+    <None Include="Resources\a3.png" />
+    <None Include="Resources\a4.png" />
+    <None Include="Resources\a5.png" />
+    <None Include="Resources\a6.png" />
+    <None Include="Resources\a7.png" />
+    <None Include="Resources\a8.png" />
+    <None Include="Resources\080948_2.jpg" />
+    <Content Include="Resources\backgroud.png" />
+    <None Include="Resources\bgr_game1.jpg" />
+    <None Include="Resources\backgroud11.jpg" />
+    <None Include="Resources\bgr_game2.jpg" />
+    <None Include="Resources\bgr_game11.jpg" />
+    <None Include="Resources\backgroud51.jpg" />
+    <None Include="Resources\backgroud61.jpg" />
+    <None Include="Resources\bgr.jpg" />
+    <None Include="Resources\bgr_game.jpg" />
+    <None Include="Resources\bgrEnd.jpg" />
+    <None Include="Resources\backgroud1.png" />
+    <Content Include="Resources\bird.png" />
+    <None Include="Resources\memory1.png" />
+    <None Include="Resources\puzzle.jpg" />
+    <None Include="Resources\car.jpg" />
+    <None Include="Resources\brick21.png" />
+    <None Include="Resources\btnAbout1.png" />
+    <None Include="Resources\btnHighScore1.png" />
+    <None Include="Resources\btnHome1.png" />
+    <None Include="Resources\btnOK1.png" />
+    <None Include="Resources\btnPlay1.png" />
+    <None Include="Resources\brick.png" />
+    <None Include="Resources\brick2.png" />
+    <None Include="Resources\btnAbout.png" />
+    <None Include="Resources\btnHighScore.png" />
+    <None Include="Resources\btnHome.png" />
+    <None Include="Resources\btnOK.png" />
+    <None Include="Resources\btnPlay.png" />
+    <None Include="Resources\btnQuit.png" />
+    <None Include="Resources\btnReplay.png" />
+    <None Include="Resources\btnResume.png" />
+    <None Include="Resources\burst2.wav" />
+    <None Include="Resources\bullet.png" />
+    <None Include="Resources\bullet1.png" />
+    <None Include="Resources\c4.png" />
+    <None Include="Resources\c3.png" />
+    <None Include="Resources\c2.png" />
+    <None Include="Resources\c1.png" />
+    <None Include="Resources\c6.png" />
+    <None Include="Resources\c5.png" />
+    <None Include="Resources\cat3.png" />
+    <None Include="Resources\cat4.png" />
+    <None Include="Resources\cat5.png" />
+    <None Include="Resources\cat6.png" />
+    <None Include="Resources\cat7.png" />
+    <None Include="Resources\cat8.png" />
+    <None Include="Resources\cat9.png" />
+    <None Include="Resources\cat1.png" />
+    <None Include="Resources\cat2.png" />
+    <Content Include="Resources\chim xanh.png" />
+    <Content Include="Resources\chim1 pngg.png" />
+    <Content Include="Resources\chimđen.png" />
+    <None Include="Resources\danh1.jpg" />
+    <None Include="Resources\circleblue.png" />
+    <None Include="Resources\click_room.wav" />
+    <None Include="Resources\dongho.png" />
+    <None Include="Resources\Exit %281%29.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\enemy.png" />
+    <Content Include="Resources\flappybird.jpg" />
+    <None Include="Resources\icon.jpg" />
+    <None Include="Resources\game_box4.png" />
+    <None Include="Resources\hanhdong.jpg" />
+    <None Include="Resources\icon_treethree1.png" />
+    <None Include="Resources\ic_eagle1.png" />
+    <None Include="Resources\icon_treefour1.png" />
+    <None Include="Resources\icon_treeone1.png" />
+    <None Include="Resources\icon_treethree2.png" />
+    <None Include="Resources\ic_eagle2.png" />
+    <None Include="Resources\freeze.bmp" />
+    <None Include="Resources\Gach.bmp" />
+    <None Include="Resources\Gach.png" />
+    <None Include="Resources\Gach2.png" />
+    <None Include="Resources\Gach3.png" />
+    <None Include="Resources\Gameover.wav" />
+    <None Include="Resources\gun_laser_mav.wav" />
+    <None Include="Resources\health.png" />
+    <None Include="Resources\Home.png" />
+    <None Include="Resources\hurtClip.wav" />
+    <None Include="Resources\ic_brick.png" />
+    <None Include="Resources\ic_clock.png" />
+    <None Include="Resources\ic_eagle.png" />
+    <None Include="Resources\ic_exit.png" />
+    <None Include="Resources\ic_health.png" />
+    <None Include="Resources\ic_home.png" />
+    <None Include="Resources\ic_home_menu.png" />
+    <None Include="Resources\ic_pause.png" />
+    <None Include="Resources\ic_pause_game.png" />
+    <None Include="Resources\ic_quit_game.png" />
+    <None Include="Resources\ic_resum_game.png" />
+    <None Include="Resources\ic_rs.png" />
+    <None Include="Resources\ic_tank.png" />
+    <None Include="Resources\icon_treefour.png" />
+    <None Include="Resources\icon_treeone.png" />
+    <None Include="Resources\icon_treethree.png" />
+    <None Include="Resources\icon_treetwo.png" />
+    <None Include="Resources\full.jpeg" />
+    <Content Include="Resources\kim cuong pngg.png" />
+    <None Include="Resources\login11.png" />
+    <None Include="Resources\laserClip.wav" />
+    <None Include="Resources\maybay.jpeg" />
+    <Content Include="Resources\moto pngg.png" />
+    <Content Include="Resources\ong png.png" />
+    <Content Include="Resources\oto pngg.png" />
+    <None Include="Resources\pass.jpg" />
+    <None Include="Resources\player1down1.bmp" />
+    <None Include="Resources\player1down1.png" />
+    <None Include="Resources\player1left1.bmp" />
+    <None Include="Resources\player1left1.png" />
+    <None Include="Resources\player2down1.bmp" />
+    <None Include="Resources\player2left1.bmp" />
+    <None Include="Resources\player2right1.bmp" />
+    <None Include="Resources\player3up1.bmp" />
+    <None Include="Resources\power_stone1.png" />
+    <None Include="Resources\Pause.png" />
+    <None Include="Resources\picHighScore.png" />
+    <None Include="Resources\picHome.png" />
+    <None Include="Resources\player1down.bmp" />
+    <None Include="Resources\player1down.png" />
+    <None Include="Resources\player1left.bmp" />
+    <None Include="Resources\player1left.png" />
+    <None Include="Resources\player1right.bmp" />
+    <None Include="Resources\player1right.png" />
+    <None Include="Resources\player1up.bmp" />
+    <None Include="Resources\player1up.png" />
+    <None Include="Resources\player2down.bmp" />
+    <None Include="Resources\player2left.bmp" />
+    <None Include="Resources\player2right.bmp" />
+    <None Include="Resources\player2up.bmp" />
+    <None Include="Resources\player3down.bmp" />
+    <None Include="Resources\player3left.bmp" />
+    <None Include="Resources\player3right.bmp" />
+    <None Include="Resources\player3up.bmp" />
+    <None Include="Resources\power_stone.png" />
+    <None Include="Resources\prop.mp3" />
+    <None Include="Resources\prop.wav" />
+    <None Include="Resources\Reload.png" />
+    <None Include="Resources\rocketred.png" />
+    <None Include="Resources\select_sound.wav" />
+    <None Include="Resources\player.png" />
+    <Content Include="Resources\snake.png" />
+    <None Include="Resources\snake1.png" />
+    <None Include="Resources\spawn1.bmp" />
+    <None Include="Resources\spawn2.bmp" />
+    <None Include="Resources\spawn3.bmp" />
+    <None Include="Resources\spawn4.bmp" />
+    <None Include="Resources\spawn5.bmp" />
+    <None Include="Resources\start.mp3" />
+    <None Include="Resources\start.wav" />
+    <Content Include="Resources\sun2 png.png" />
+    <None Include="Resources\zombie.jpg" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\user11.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\tt6.jpg" />
+    <None Include="Resources\tritue.jpg" />
+    <None Include="Resources\upgrade.bmp" />
+    <None Include="Resources\tritue1.jpg" />
+    <None Include="Resources\sun2 png1.png" />
+    <None Include="Resources\xetang.png" />
+    <Content Include="Resources\đường png.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
